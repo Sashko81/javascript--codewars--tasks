@@ -14,3 +14,22 @@ MyObject.call(myObj)
 function animal(obj){
   return `This ${obj.color} ${obj.name} has ${obj.legs} legs.`;
 }
+
+//https://www.codewars.com/kata/highest-and-lowest/solutions/javascript
+//In this little assignment you are given a string of space separated numbers, and have to return the highest and lowest number.
+function highAndLow(numbers){
+  numbers = numbers.split(' ').map(Number);
+  return Math.max.apply(0, numbers) + ' ' + Math.min.apply(0, numbers);
+}
+
+//https://www.codewars.com/kata/5545f109004975ea66000086
+//Create a function isDivisible(n, x, y) that checks if a number n is divisible by two numbers x AND y. All inputs are positive, non-zero digits.
+function isDivisible (n,x,y) {
+    return (n%x)+(n%y)==0;
+}
+//2 version
+const isDivisible = (n,x,y) =>n%x==0 && n%y==0;
+//2 version
+function isDivisible(n,x,y) {
+    return (n%x==0 && n%y==0) ? true:false;
+}
